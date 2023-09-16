@@ -1,0 +1,29 @@
+# Create base class vehicle with attributes make and madel. create derived classes car and motorcycle with their own attributes and methods
+
+
+class Vehicle:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def display(self):
+        print(f"Make: {self.make}, Model: {self.model}")
+
+class Car(Vehicle):
+    def __init__(self, make, model, wheels):
+        super().__init__(make, model)
+        self.wheels = wheels
+
+    def display(self):
+        super().display()
+        print(f"Number of wheels: {self.wheels}")
+
+class Motorcycle(Vehicle):
+    def start_engine(self):
+        print("Motorcycle engine started.")
+
+car = Car("Suzuki", "Access", 2)  # Added the 'wheels' parameter
+motorcycle = Motorcycle("Honda", "City")
+car.display()
+motorcycle.display()
+motorcycle.start_engine()

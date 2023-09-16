@@ -1,0 +1,14 @@
+# create a list of your favourite movies and print the third movie on the list
+prabhas = ["Bahubali", "Saaho", "Salaar", "Spirit", "Kalki"]
+print("Third movie from the list is: ", prabhas[2])
+
+
+# Add a movie to the end of the list and then remove the second movie
+prabhas.append("Saaho")
+removed_prabhas = prabhas.pop(2)
+printt("Removed Second Movie: ", removed_prabhas)
+
+
+
+# Slice the list to create new list containing the first three movies 
+print("First three movies using slicing:", prabhas[:3])

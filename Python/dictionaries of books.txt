@@ -1,0 +1,16 @@
+# create a dictonary of book titles and their authors
+books = {
+   "Python Course": "Coursera",
+   "Data Science": "IBM",
+   "JavaScript": "Google",
+}
+for book, author in books.items():
+   print(f"'{book}' by {author}")
+
+# Add a new book to the dictonary and then update the author of an existing book
+books["Introduction"] = "Moin"
+books["Code"] = "Khan"
+
+# Loop through the dictonary and print each book title and author
+for book, author in books.items():
+   print(f"'{book}' by {author}")

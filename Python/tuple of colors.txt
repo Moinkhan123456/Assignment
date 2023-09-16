@@ -1,0 +1,10 @@
+#Create a tuple of your favourite colors and print the second color
+
+colors = ("Red", "Black", "White", "Green", "Yellow", "Orange")
+print("Second Color is:", colors[1])
+
+
+
+# Loop through the tuple and print each color
+for color in colors:
+    print(colors)

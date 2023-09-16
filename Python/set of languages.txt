@@ -1,0 +1,14 @@
+# Creae a set of programming languages you know and add a new language
+set = {"PLSQL", "Python", "Java", "C++"}
+set.add("C Language")
+print("Programming Languages are: ", set)
+
+
+# Remove a language from set then check if "Python is in the set
+set.remove("C Language")
+print(set)
+
+
+# Create a second set of languages and find the intersection of the sets.
+second_set = {"Python","PHP","Java"}
+print("Common Languages are in both sets:", setintersection(second_set))

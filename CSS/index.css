@@ -1,0 +1,126 @@
+/* Reset some default styles for better consistency */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0c1825;
+}
+html{
+  background-color: #0c1825;
+}
+.table{
+  background-color: #0c1825;
+  color: rgb(211, 164, 36);
+}
+
+/* Style the navigation bar */
+.navbar {
+  background-color: #151718;
+  color: rgb(32, 30, 30);
+}
+
+.navbar a {
+  color: rgb(235, 151, 27);
+  background-color: #fdfdfa;
+}
+
+/* Style the main container */
+.container {
+  margin-top: 20px;
+}
+
+/* Style the headings */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(224, 228, 207);
+}
+
+/* Style the contact form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+/* Style buttons */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #8d959c;
+}
+
+/* Add more custom styles as needed */
+.navbar navbar-expand-lg navbar-light bg-light{
+  background-color: #0c1825;
+}
+h1.display-4{
+  color: rgb(211, 164, 36);
+  background-color: #0c1825;
+}
+p.lead{
+  color:rgb(211, 164, 36);
+  background-color: #0c1825;
+}
+div.App{
+  background-color: #0c1825;
+}
+nav.navbar navbar-expand-lg navbar-light bg-light{
+  background-color: #0c1825;
+}
+div.container mt-5 + h1{
+  color: rgb(211, 164, 36);
+}
+/* Login.css */
+/* .login-container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form {
+  text-align: center;
+  width: 300px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-link {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.register-link a {
+  text-decoration: none;
+  color: #007bff;
+} */
