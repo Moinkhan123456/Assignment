@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Table</title>
+</head>
+<body>
+<table id="employeeTable">
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Phone Number</th>
+</tr>
+</table>
+
+<script>
+       // Define an array of employees
+       var employees = [
+           { name: "Moin", address: "17-2-22 islampeta", phonenumber: "7032302001" },
+           { name: "Abhinay", address: "16-5-54 nazerpet", phonenumber: "9987539876" },
+           { name: "Karthik", address: "87-0975 islampeta", phonenumber: "8765386542" }
+       ];
+
+       // Get a reference to the HTML table element
+       var table = document.getElementById("employeeTable");
+
+       // Populate the table with employee data
+       for (var i = 0; i < employees.length; i++) {
+           var row = table.insertRow(i + 1);
+           var nameCell = row.insertCell(0);
+           var addressCell = row.insertCell(1);
+           var phoneCell = row.insertCell(2);
+
+           nameCell.innerHTML = employees[i].name;
+           addressCell.innerHTML = employees[i].address;
+           phoneCell.innerHTML = employees[i].phonenumber;
+       }
+</script>
+</body>
+</html>

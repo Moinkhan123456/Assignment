@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    
+    <!-- Input field for the user to enter the target date and time -->
+    <label for="targetDateInput">Enter Target Date and Time: </label>
+    <input type="datetime-local" id="targetDateInput">
+    <button onclick="setCustomTarget()">Set Custom Target</button>
+
+    <div id="timer"></div>
+
+    <script>
+        let targetDate = new Date().getTime(); // Initialize with current time
+
+        function setCustomTarget() {
+            const customTargetInput = document.getElementById('targetDateInput');
+            const customTargetValue = customTargetInput.value;
+            targetDate = new Date(customTargetValue).getTime();
+
+            // Update the timer immediately when the custom target is set
+            updateTimer();
+        }
+
+        function updateTimer() {
+            const currentDate = new Date().getTime();
+            const timeRemaining = targetDate - currentDate;
+
+            if (timeRemaining <= 0) {
+                document.getElementById('timer').innerHTML = 'Countdown expired!';
+                return;
+            }
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            const timerElement = document.getElementById('timer');
+            timerElement.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+        }
+
+        // Update the timer every second
+        setInterval(updateTimer, 1000);
+
+        // Initial update
+        updateTimer();
+    </script>
+</body>
+</html>

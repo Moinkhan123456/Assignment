@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON to HTML Table</title>
+</head>
+<body>
+
+<div id="table-container"></div>
+
+<script>
+    // Sample JSON object
+    var jsonData = [
+        { "Name": "John", "Age": 30, "City": "New York" },
+        { "Name": "Alice", "Age": 25, "City": "Los Angeles" },
+        { "Name": "Bob", "Age": 35, "City": "Chicago" }
+    ];
+
+    // Function to convert JSON to HTML table
+    function jsonToTable(jsonData) {
+        var tableHtml = '<table border="1">';
+        
+        // Create table header row
+        tableHtml += '<tr>';
+        for (var key in jsonData[0]) {
+            if (jsonData[0].hasOwnProperty(key)) {
+                tableHtml += '<th>' + key + '</th>';
+            }
+        }
+        tableHtml += '</tr>';
+
+        // Create table data rows
+        for (var i = 0; i < jsonData.length; i++) {
+            tableHtml += '<tr>';
+            for (var key in jsonData[i]) {
+                if (jsonData[i].hasOwnProperty(key)) {
+                    tableHtml += '<td>' + jsonData[i][key] + '</td>';
+                }
+            }
+            tableHtml += '</tr>';
+        }
+
+        tableHtml += '</table>';
+        return tableHtml;
+    }
+
+    // Display the HTML table
+    var tableContainer = document.getElementById('table-container');
+    tableContainer.innerHTML = jsonToTable(jsonData);
+</script>
+
+</body>
+</html>
